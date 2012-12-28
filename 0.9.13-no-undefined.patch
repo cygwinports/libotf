@@ -1,0 +1,11 @@
+--- origsrc/libotf-0.9.13/src/Makefile.am	2010-03-23 02:36:12.000000000 -0500
++++ src/libotf-0.9.13/src/Makefile.am	2012-12-27 18:52:55.024070700 -0600
+@@ -24,6 +24,8 @@
+ 
+ lib_LTLIBRARIES = libotf.la
+ 
++libotf_la_LDFLAGS = -no-undefined
++
+ libotf_la_SOURCES = \
+ 	otf.h \
+ 	otferror.c \

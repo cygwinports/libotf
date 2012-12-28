@@ -1,0 +1,19 @@
+NAME="libotf"
+VERSION=0.9.13
+RELEASE=1
+CATEGORY="Text"
+SUMMARY="OpenType font library"
+DESCRIPTION="The library libotf reads Open Type Layout Tables from OTF file,
+and converts a Unicode character sequence to a glyph code sequence by using
+those tables."
+HOMEPAGE="http://www.nongnu.org/m17n/"
+SRC_URI="mirror://savannah/m17n/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="0.9.13-no-undefined.patch
+           0.9.13-vpath.patch"
+
+PKG_NAMES="libotf0 libotf-devel libotf-bin"
+libotf0_CONTENTS="usr/bin/cygotf-0.dll usr/share/doc/"
+libotf_devel_CONTENTS="usr/bin/libotf-config usr/include/ usr/lib/"
+libotf_bin_CONTENTS="usr/bin/otf*"
+
+KEEP_LA_FILES="none"
